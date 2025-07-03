@@ -1,0 +1,85 @@
+
+
+
+select * from Students where marks>80;
+
+
+select * from Students where department='MCA';
+
+select name,marks from Students order by marks;
+
+
+select count(*) from Students;
+
+
+select avg(marks) from Students;
+
+
+
+select marks from Students order by marks desc limit 1;
+
+
+select * from Students order by marks limit 1;
+
+
+
+select department,count(*) from Students group by department;
+
+
+
+
+select department,avg(marks) from Students group by department;
+
+
+
+
+select sum(marks) as total from Students where department='MCA';
+
+
+
+
+
+select avg(marks) from Students limit 1;
+
+
+
+
+
+
+
+select avg(credits) as total from Courses ;
+
+
+select count(*) from Courses group by courseName;
+
+
+
+
+select * from Students;
+select * from courses;
+
+
+
+select avg(credits) from Courses group  by credits having credits>3;
+
+
+
+select max(marks) from Students group by department having max(marks) > 80;
+
+
+
+select avg(marks) from Students having avg(marks)>30;
+
+
+select avg(marks) from Students group by department having avg(marks)>80 limit 1;
+
+
+
+select department,max(marks) from Students group by department having max(marks)>90;
+
+
+
+
+
+
+
