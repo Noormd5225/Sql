@@ -1,0 +1,74 @@
+select * from customers;
+select * from customers where email like '%@example.com';
+
+select count(customerid),country from customers group by country;
+
+
+
+select distinct country  from customers;
+
+select * from customers where name like '%a%';
+select count(country) from customers;
+
+select customerid,name,email,country ,datejoined from customers where country='india';
+
+select * from products;
+
+select * from products where  productname like 's%';
+
+select category,count(productid) from products group by category having count(productid)>1;
+
+select department, sum(salary) from employees group by department having sum(salary)>100000;
+
+
+select productname,stock from products where stock<=20;
+
+
+select avg(price) as average_price from products;
+select * from products order by price asc;
+
+
+select * from products where productname like '_____';
+
+select count(productid), category from products group by category;
+
+select productname,price  from products;
+
+select productname,price from products where price>=50000;
+
+select * from employees;
+
+
+select * from employees where name like '%r';
+
+select * from employees where hiredate between'2020-01-01'  and '2022-12-31';
+select * from employees where department='hr' or 'sales';
+
+select sum(salary), department from employees group by department;
+ 
+select name,salary from employees order by salary desc limit 1;
+
+
+select * from employees order by salary desc limit 3;
+
+select name from employees where department='it';
+
+
+select * from employees order by salary desc ;
+
+
+select * from orders;
+
+select count(customerid),orderid from orders group by orderid;
+
+select sum(totalamount) as total from orders;
+select count(orderid) from orders;
+
+
+
+select orderid,totalamount from orders;
+
+select * from employees where department in('hr','sales');
+
+select * from products where category in ('electronics','furniture');
+
